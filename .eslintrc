@@ -1,5 +1,5 @@
 {
-    "extends": "cooperka/react-native",
+    "extends": "airbnb",
     "env": {
         "browser": true,
         "jest": true
