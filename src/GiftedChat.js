@@ -236,7 +236,12 @@ class GiftedChat extends React.Component {
    * Returns the height, based on current window size, taking the keyboard into account.
    */
   getMessagesContainerHeightWithKeyboard(composerHeight = this.state.composerHeight) {
-    return this.getBasicMessagesContainerHeight(composerHeight) - this.getKeyboardHeight() + this.getBottomOffset();
+    const keyboardAvoidHeight = this.props.avoidKeyboard
+      ? this.getKeyboardHeight()
+      : 0;
+    return this.getBasicMessagesContainerHeight(composerHeight)
+      - keyboardAvoidHeight
+      + this.getBottomOffset();
   }
 
   prepareMessagesContainerHeight(value) {
@@ -506,6 +511,7 @@ GiftedChat.childContextTypes = {
 GiftedChat.defaultProps = {
   messages: [],
   text: undefined,
+  avoidKeyboard: true,
   placeholder: DEFAULT_PLACEHOLDER,
   messageIdGenerator: () => uuid.v4(),
   user: {},
@@ -565,6 +571,7 @@ GiftedChat.propTypes = {
   messages: PropTypes.arrayOf(PropTypes.object),
   text: PropTypes.string,
   placeholder: PropTypes.string,
+  avoidKeyboard: PropTypes.bool,
   messageIdGenerator: PropTypes.func,
   user: PropTypes.object,
   onSend: PropTypes.func,
