@@ -3,7 +3,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
-import Color from './Color';
+import Color from './Color_';
 
 export default function SystemMessage({ currentMessage, containerStyle, wrapperStyle, textStyle }) {
   return (

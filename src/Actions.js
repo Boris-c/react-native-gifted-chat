@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View, ViewPropTypes } from 'react-native';
-import Color from './Color';
+import Color from './Color_';
 
 export default class Actions extends React.Component {
 

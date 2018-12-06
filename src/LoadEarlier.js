@@ -11,7 +11,7 @@ import {
   View,
   ViewPropTypes,
 } from 'react-native';
-import Color from './Color';
+import Color from './Color_';
 
 export default class LoadEarlier extends React.Component {
 

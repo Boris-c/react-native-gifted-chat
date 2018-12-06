@@ -7,7 +7,7 @@ import { Text, Clipboard, StyleSheet, TouchableWithoutFeedback, View, ViewPropTy
 import MessageText from './MessageText';
 import MessageImage from './MessageImage';
 import Time from './Time';
-import Color from './Color';
+import Color from './Color_';
 
 import { isSameUser, isSameDay } from './utils';
 import MessageVideo from './MessageVideo';

@@ -5,7 +5,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native';
 import moment from 'moment';
 
-import Color from './Color';
+import Color from './Color_';
 
 import { isSameDay } from './utils';
 import { DATE_FORMAT } from './Constant';

@@ -5,7 +5,7 @@ import React from 'react';
 import { Platform, StyleSheet, TextInput } from 'react-native';
 
 import { MIN_COMPOSER_HEIGHT, DEFAULT_PLACEHOLDER } from './Constant';
-import Color from './Color';
+import Color from './Color_';
 
 export default class Composer extends React.Component {
 
