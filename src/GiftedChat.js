@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Animated, Platform, StyleSheet, View } from 'react-native';
 
-import ActionSheet from '@expo/react-native-action-sheet';
+import { ActionSheetProvider } from '@expo/react-native-action-sheet';
 import moment from 'moment';
 import uuid from 'uuid';
 
@@ -480,12 +480,12 @@ class GiftedChat extends React.Component {
   render() {
     if (this.state.isInitialized === true) {
       return (
-        <ActionSheet ref={(component) => (this._actionSheetRef = component)}>
+        <ActionSheetProvider ref={(component) => (this._actionSheetRef = component)}>
           <View style={styles.container} onLayout={this.onMainViewLayout}>
             {this.renderMessages()}
             {this.renderInputToolbar()}
           </View>
-        </ActionSheet>
+        </ActionSheetProvider>
       );
     }
     return (
